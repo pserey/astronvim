@@ -70,6 +70,10 @@ return {
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
     vim.cmd([[nnoremap <C-a> <C-w>]])
+    
+    -- add PeekOpen command
+    local peek = require 'peek'
+    vim.api.nvim_create_user_command('PeekOpen', peek.open, {})
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
