@@ -1,0 +1,30 @@
+{
+	"Input Split": {
+		"prefix": "inps",
+		"body": [
+			"input().split()"
+		],
+		"description": "split input"
+	},
+	"Input List (Spaces)": {
+		"prefix": "mlist",
+		"body": [
+			"list(map(int, input().split($1)))"
+		],
+		"description": "list from split input"
+	},
+	"Arbitraty independent inputs": {
+		"prefix": "maps",
+		"body": [
+			"map(int, input().split())"
+		],
+		"description": "variables from split input"
+	},
+	"Int to input": {
+		"prefix": "iinp",
+		"body": [
+			"int(input())"
+		],
+		"description": "variables from split input"
+	}
+}
