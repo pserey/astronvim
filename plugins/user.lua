@@ -177,5 +177,11 @@ return {
   },
   {
     'mortepau/codicons.nvim'
+  },
+  {
+    'max397574/better-escape.nvim',
+    opts = {
+      mapping = {'jk'}
+    }
   }
 }
