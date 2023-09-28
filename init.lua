@@ -69,22 +69,21 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    local augroup = vim.api.nvim_create_augroup
+    local autocmd = vim.api.nvim_create_autocmd
+    
     vim.cmd([[nnoremap <C-a> <C-w>]])
     
     -- add PeekOpen command
     local peek = require 'peek'
     vim.api.nvim_create_user_command('PeekOpen', peek.open, {})
-    -- Set up custom filetypes
-    -- vim.filetype.add {
-    --   extension = {
-    --     foo = "fooscript",
-    --   },
-    --   filename = {
-    --     ["Foofile"] = "fooscript",
-    --   },
-    --   pattern = {
-    --     ["~/%.config/foo/.*"] = "fooscript",
-    --   },
-    -- }
+
+    -- add configuration for specific languages
+    local sh2 = augroup('2ShiftWidthLangs', { clear = true })
+    autocmd({ 'BufNewFile', 'BufRead' }, {
+      pattern = { '*.R', '*.r', '*.lua', '*.cpp' },
+      command = 'set shiftwidth=2',
+      group = sh2
+    })
   end,
 }
