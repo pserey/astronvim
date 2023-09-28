@@ -10,5 +10,6 @@ return {
       'latex',
       'java',
     })
+    opts.indent = { enable = true}
   end,
 }
