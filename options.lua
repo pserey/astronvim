@@ -9,7 +9,7 @@ return {
     smartindent = true,
     autoindent = true,
     smarttab = true,
-    relativenumber = false
+    relativenumber = true
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
