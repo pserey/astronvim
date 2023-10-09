@@ -19,6 +19,9 @@ return {
     'ellisonleao/gruvbox.nvim'
   },
   {
+    'Mofiqul/dracula.nvim'
+  },
+  {
     'lambdalisue/suda.vim',
     config = function(plugin, opts)
       vim.api.nvim_exec([[

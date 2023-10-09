@@ -9,7 +9,9 @@ return {
     smartindent = true,
     autoindent = true,
     smarttab = true,
-    relativenumber = true
+    relativenumber = true,
+    foldenable = false,
+    shell = "/usr/bin/zsh"
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
